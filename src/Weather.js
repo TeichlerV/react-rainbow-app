@@ -24,7 +24,7 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="container">
-        <img src={rainbow} className="rainbow img-fluid" />
+        <img src={rainbow} className="rainbow img-fluid" alt="rainbow" />
         <div className="card">
           <form>
             <input
