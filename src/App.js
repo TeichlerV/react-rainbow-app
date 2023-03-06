@@ -4,8 +4,14 @@ import Weather from "./Weather";
 function App() {
   return (
     <div className="App">
-      <h1>Weather App</h1>
       <Weather />
+      <footer>
+        Open-sourced code by{" "}
+        <a href="https://github.com/TeichlerV" target="_blank">
+          Viktoria Teichler
+        </a>{" "}
+        on GitHub.
+      </footer>
     </div>
   );
 }

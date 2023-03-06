@@ -1,0 +1,39 @@
+body {
+  background-color: rgb(168, 244, 247);
+  font-family: "Amatic SC", cursive;
+  font-family: "Dosis", sans-serif;
+}
+.card {
+  display: block;
+  margin: 0 auto;
+  border: solid 3px black;
+  width: 600px;
+  padding: 20px;
+  background-color: #ffffff;
+}
+form {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.rainbow {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+.icon {
+  margin: 15px;
+  font-size: 40px;
+}
+
+.temperature {
+  font-size: 60px;
+  font-weight: 600px;
+}
+.celsius {
+  font-size: 20px;
+  position: relative;
+  top: -20px;
+}
+.description {
+  margin: 20px;
+}
