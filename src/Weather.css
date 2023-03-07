@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(168, 244, 247);
+  background-color: #9ecae4;
   font-family: "Amatic SC", cursive;
   font-family: "Dosis", sans-serif;
 }
@@ -22,7 +22,6 @@ form {
 }
 .icon {
   margin: 15px;
-  font-size: 40px;
 }
 
 .temperature {
