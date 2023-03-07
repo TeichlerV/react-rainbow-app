@@ -3,6 +3,7 @@ import "./App.css";
 import "./Weather.css";
 import axios from "axios";
 import rainbow from "./rainbow.gif";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const [ready, setReady] = useState(false);
@@ -14,7 +15,7 @@ export default function Weather(props) {
       ready: true,
       temperature: response.data.main.temp,
       city: response.data.name,
-      date: "Monday 13:00",
+      date: new Date(response.data.dt * 1000),
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
@@ -24,7 +25,7 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="container">
-        <img src={rainbow} className="rainbow img-fluid" alt="rainbow" />
+        <img src={rainbow} className="rainbow img-fluid" alt="rainbow-img" />
         <div className="card">
           <form>
             <input
@@ -36,7 +37,10 @@ export default function Weather(props) {
           </form>
           <div className="row">
             <h1 className="city">{weatherData.city}</h1>
-            <div className="date mb-3">{weatherData.date}</div>
+            <div className="date mb-3">
+              {" "}
+              <FormattedDate date={weatherData.date} />{" "}
+            </div>
           </div>
           <div className="row">
             <div className="col-6 text-center">
@@ -67,8 +71,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    const apiKey = "695ea21f19f26ecd9bc4ce42561bc89a";
-
+    const apiKey = "e47b62adfa40cf42033dd6ba29e3bb42";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
