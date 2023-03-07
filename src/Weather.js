@@ -8,7 +8,6 @@ import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
-  const [ready, setReady] = useState(false);
   const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
     setWeatherData({
@@ -52,7 +51,7 @@ export default function Weather(props) {
             <input type="submit" value="Search"></input>
           </form>
           <div className="float-left">
-            <WeatherInfo data={weatherData} alt={props.data.description} />
+            <WeatherInfo data={weatherData} alt={weatherData.description} />
           </div>
         </div>
       </div>
