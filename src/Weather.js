@@ -19,7 +19,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
-      icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
     });
   }
 
@@ -51,7 +51,9 @@ export default function Weather(props) {
             ></input>
             <input type="submit" value="Search"></input>
           </form>
-          <WeatherInfo data={weatherData} />
+          <div className="float-left">
+            <WeatherInfo data={weatherData} alt={props.data.description} />
+          </div>
         </div>
       </div>
     );
