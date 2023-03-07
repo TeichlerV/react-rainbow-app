@@ -36,3 +36,25 @@ form {
 .description {
   margin: 20px;
 }
+.city {
+  color: #8bc540;
+  font-weight: bold;
+  font-size: 60px;
+}
+.city-name {
+  text-align: center;
+}
+.date p {
+  font-size: small;
+}
+.humidity,
+.wind {
+  color: red;
+}
+.button {
+  color: #f79220;
+  border-color: #f79220;
+}
+.type-city {
+  border-color: #f79220;
+}
