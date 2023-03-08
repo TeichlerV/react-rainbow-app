@@ -9,7 +9,7 @@ export default function WeatherInfo(props) {
       <div className="city-name">
         <h1 className="city">{props.data.city}</h1>
         <div className="date mb-3">
-          <small> Latest update:</small>{" "}
+          <small> Latest updated:</small>{" "}
           <FormattedDate date={props.data.date} />
         </div>
       </div>
