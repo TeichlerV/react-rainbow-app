@@ -28,11 +28,7 @@ form {
   font-size: 60px;
   font-weight: 600px;
 }
-.celsius {
-  font-size: 20px;
-  position: relative;
-  top: -20px;
-}
+
 .description {
   margin: 20px;
 }
@@ -54,7 +50,14 @@ form {
 .button {
   color: #f79220;
   border-color: #f79220;
+  background-color: #ffffff;
 }
 .type-city {
   border-color: #f79220;
+  color: #f79220;
+}
+.units {
+  font-size: 20px;
+  position: relative;
+  top: -20px;
 }
