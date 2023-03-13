@@ -3,6 +3,7 @@ import "./App.css";
 import "./Weather.css";
 import axios from "axios";
 import rainbow from "./rainbow.gif";
+import Forecast from "./Forecast";
 
 import WeatherInfo from "./WeatherInfo";
 
@@ -12,6 +13,7 @@ export default function Weather(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
@@ -53,6 +55,7 @@ export default function Weather(props) {
           </form>
           <div className="float-left">
             <WeatherInfo data={weatherData} alt={weatherData.description} />
+            <Forecast coordinates={weatherData.coordinates} />
           </div>
         </div>
       </div>
