@@ -45,16 +45,14 @@ form {
 }
 .humidity,
 .wind {
-  color: red;
+  color: black;
 }
 .button {
-  color: #f79220;
-  border-color: #f79220;
+  border-radius: 4px;
   background-color: #ffffff;
 }
 .type-city {
-  border-color: #f79220;
-  color: #f79220;
+  border-radius: 4px;
 }
 .units {
   font-size: 15px;
